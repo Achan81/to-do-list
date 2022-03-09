@@ -1,19 +1,30 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
+import Todo from './components/Todo'
+import TodoForm from './components/TodoForm'
+
 function App() {
-  const [todos, setTodos] = React.useState([
-    { task: 'my todo1', completed: false, id: uuid() },
-    { task: 'my todo2', completed: true, id: uuid() }
-  ])
+  const [todos, setTodos] = React.useState(() => {
+    const storedTodos = window.localStorage.getItem('todos')
+    if (storedTodos) {
+      return JSON.parse(storedTodos)
+    }
+    return []
+  })  
 
   const [newTodo, setNewTodo] = React.useState('') // console.log('current todos', todos)
   const hasNewTodo = !!newTodo.trim()
 
+  React.useEffect(() => {
+    window.localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
+
   const handleSubmit = (e) => {
     e.preventDefault() // console.log('submitting', newTodo)
 
-    if (!newTodo.trim()) return //if input is empty does add to list (including white space .trim)
+    if (!newTodo.trim()) return //if input is empty doesn't add to list (including white space .trim)
 
     const createdTodo = {
       task: newTodo,
@@ -41,33 +52,45 @@ function App() {
     // console.log(newTodos)
     // console.log('clicked', todoId)
   }
+  
 
-  const remainingTodos = todos.filter(todo => !todo.completed) .length
+  const deleteTodo = (todoIdToRemove) => {
+    if (window.confirm('Are you sure you want to remove this item?')) {
+      // make custom modal confirmation pop up...
+      const filteredTodos = todos.filter(todo => {
+        return todo.id !== todoIdToRemove
+      })
+      // console.log(filteredTodos)
+      setTodos(filteredTodos)
+    }
+  }
 
+  const remainingTodos = todos.filter(todo => !todo.completed).length
 
   return (
     <main>
       <h1>You have {remainingTodos} thing(s) to do!</h1> 
-      {/* rerendered to show how my Todos there are */}
+      {/* re-rendered to show how my Todos there are  */}
+
       <ul>
         {todos.map(todo => (
-          <li 
-            key={todo.id} 
-            className={todo.completed ? 'completed' : ''}
-            onClick={() => toggleComplete(todo.id)} //delayed definition to call following function
-          >
-            {todo.task}</li>
+          <Todo
+            key={todo.id}
+            task={todo.task}
+            completed={todo.completed}
+            handleClick={() => toggleComplete(todo.id)}
+            handleDelete={() => deleteTodo(todo.id)}
+          />
         ))}
       </ul>
 
-      <form onSubmit={handleSubmit}>
-        <input 
-          placeholder="Task" onChange={handleChange} 
-          value={newTodo} />
-        {/* is this true fo this to do, if it is at this class otherwise don't add any class) */}
-        {/* controlled input - by adding value key*/}
-        <button disabled={!hasNewTodo}>Add</button>
-      </form>
+      <TodoForm
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        newTodo={newTodo}
+        hasNewTodo={hasNewTodo}
+      />
+
     </main>
   )
 }
