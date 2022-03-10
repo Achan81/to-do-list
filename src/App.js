@@ -53,7 +53,6 @@ function App() {
     // console.log('clicked', todoId)
   }
   
-
   const deleteTodo = (todoIdToRemove) => {
     if (window.confirm('Are you sure you want to remove this item?')) {
       // make custom modal confirmation pop up...
@@ -67,32 +66,70 @@ function App() {
 
   const remainingTodos = todos.filter(todo => !todo.completed).length
 
+  const deleteCompletedTodo = (completedTrueRemove) => {
+    if (window.confirm('Are you sure you want to remove these completed items?')) {
+      const filteredCompletedTodos = todos.filter(todo => {
+        if (todo.completed !== true) {
+          return completedTrueRemove
+        }
+        return
+      })
+      setTodos(filteredCompletedTodos)
+    }
+  }
+
+
   return (
-    <main>
-      <h1>You have {remainingTodos} thing(s) to do!</h1> 
-      {/* re-rendered to show how my Todos there are  */}
 
-      <ul>
-        {todos.map(todo => (
-          <Todo
-            key={todo.id}
-            task={todo.task}
-            completed={todo.completed}
-            handleClick={() => toggleComplete(todo.id)}
-            handleDelete={() => deleteTodo(todo.id)}
-          />
-        ))}
-      </ul>
+    <div className="container col-10 listbg mt-4 mb-3 pt-2 pb-1 shadow p-3 mb-5 bg-body rounded">
+      <div className="row align-items-center">
+        <div className="col-12">
+          <main>
+            <h5 className="title text-bold">TO DO LIST</h5>
+            <p className="remaining">You have {remainingTodos} thing(s) to do!</p> 
+            <hr></hr>
+            {/* re-rendered to show how my Todos there are  */}
+            
+            <hr></hr>
 
-      <TodoForm
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-        newTodo={newTodo}
-        hasNewTodo={hasNewTodo}
-      />
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-6">
+                  <TodoForm
+                    handleSubmit={handleSubmit}
+                    handleChange={handleChange}
+                    newTodo={newTodo}
+                    hasNewTodo={hasNewTodo}
+                  />
+                </div>
 
-    </main>
+                <div className="col-xs-12 col-sm-6">
+                  <p className="small-instruction">(click on assigned task to <span className="text-decoration-line-through">mark</span> as completed)</p>
+                  <button type="button" className="remove-completed btn btn-dark btn-sm" onClick={deleteCompletedTodo}>Remove all Completed Tasks</button>
+                </div>
+              </div>
+            </div>
+
+
+            <ul className="container tasks-added">
+              {todos.map(todo => (
+                <Todo
+                  key={todo.id} 
+                  task={todo.task} 
+                  completed={todo.completed} 
+                  handleClick={() => toggleComplete(todo.id)} 
+                  handleDelete={() => deleteTodo(todo.id)} 
+                />
+              ))}
+            </ul>
+
+          </main>
+        </div>
+      </div>
+    </div>
   )
+  
 }
+
 
 export default App
