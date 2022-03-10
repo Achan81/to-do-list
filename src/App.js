@@ -80,53 +80,73 @@ function App() {
 
 
   return (
+    <>
+      <div className="container col-12 listbg mt-4 pt-2 pb-1 shadow p-3 mb-5 bg-body rounded">
+        <div className="row align-items-center">
+          <div className="col">
+            <main>
 
-    <div className="container col-10 listbg mt-4 mb-3 pt-2 pb-1 shadow p-3 mb-5 bg-body rounded">
-      <div className="row align-items-center">
-        <div className="col-12">
-          <main>
-            <h5 className="title text-bold">TO DO LIST</h5>
-            <p className="remaining">You have {remainingTodos} thing(s) to do!</p> 
-            <hr></hr>
-            {/* re-rendered to show how my Todos there are  */}
+              <div className="icon-group d-flex justify-content-end">
+                <a href="mailto:achan81@icloud.com" rel="noopener noreferrer" target="_blank">
+                  <img alt="mail" src="https://i.imgur.com/l0ehegq.png" className="icon mail-image col"/></a>
+
+                <a href="https://github.com/Achan81/" rel="noopener noreferrer" target="_blank">
+                  <img alt="acgh" src="https://i.imgur.com/yWic7vC.png" className="icon acgh-image col"/></a>
+    
+                <a href="https://www.linkedin.com/in/achan81/" rel="noopener noreferrer" target="_blank">
+                  <img alt="linkedin" src="https://i.imgur.com/6j6BRm3.png" className="icon linkedin-image col"/></a>
+              </div>
+
+              <h5 className="title text-bold">TO DO LIST</h5>
+              <p className="remaining">You have {remainingTodos} thing(s) to do!</p> 
+              <hr></hr>
+              {/* re-rendered to show how my Todos there are  */}
             
-            <hr></hr>
+              <hr></hr>
 
-            <div className="container">
-              <div className="row">
-                <div className="col-xs-12 col-sm-6">
-                  <TodoForm
-                    handleSubmit={handleSubmit}
-                    handleChange={handleChange}
-                    newTodo={newTodo}
-                    hasNewTodo={hasNewTodo}
-                  />
-                </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col-xs-12 col-sm-6">
+                    <TodoForm
+                      handleSubmit={handleSubmit}
+                      handleChange={handleChange}
+                      newTodo={newTodo}
+                      hasNewTodo={hasNewTodo}
+                    />
+                  </div>
 
-                <div className="col-xs-12 col-sm-6">
-                  <p className="small-instruction">(click on assigned task to <span className="text-decoration-line-through">mark</span> as completed)</p>
-                  <button type="button" className="remove-completed btn btn-dark btn-sm" onClick={deleteCompletedTodo}>Remove all Completed Tasks</button>
+                  <div className="col-xs-12 col-sm-6">
+                    <p className="small-instruction">(click on assigned task to <span className="text-decoration-line-through">mark</span> as completed)</p>
+                    <button type="button" className="remove-completed btn btn-dark btn-sm" onClick={deleteCompletedTodo}>Remove all Completed Tasks</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
 
-            <ul className="container tasks-added">
-              {todos.map(todo => (
-                <Todo
-                  key={todo.id} 
-                  task={todo.task} 
-                  completed={todo.completed} 
-                  handleClick={() => toggleComplete(todo.id)} 
-                  handleDelete={() => deleteTodo(todo.id)} 
-                />
-              ))}
-            </ul>
+              <ul className="container tasks-added">
+                {todos.map(todo => (
+                  <Todo
+                    key={todo.id} 
+                    task={todo.task} 
+                    completed={todo.completed} 
+                    handleClick={() => toggleComplete(todo.id)} 
+                    handleDelete={() => deleteTodo(todo.id)} 
+                  />
+                ))}
+              </ul>
 
-          </main>
+            </main>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="container">
+        <div className="icons d-flex flex-row justify-content-center">
+
+        </div>
+      </div>
+    </>
+    
   )
   
 }

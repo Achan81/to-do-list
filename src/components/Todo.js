@@ -5,7 +5,7 @@ function Todo({ completed, task, handleClick, handleDelete }) {
     <>
       <div className="container">
         <div className="row">
-          <div className="d-flex align-items-center">
+          <div className="d-flex justify-content-center">
             <li 
               //   key={todo.id} 
               className= {completed ? 'completed' : ''}
@@ -14,7 +14,7 @@ function Todo({ completed, task, handleClick, handleDelete }) {
             > 
               {task}
             </li>
-            <button onClick={handleDelete} type="text" className="delete-task btn btn-light border btn-sm">remove</button>
+            <button onClick={handleDelete} type="text" className="delete-task btn-none btn btn-sm">REMOVE</button>
           
           </div>
         </div>
