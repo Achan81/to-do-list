@@ -1,4 +1,4 @@
-# Side Project  - TO-DO-LIST readme
+# Side Project  - TO-DO-LIST README
 
 [Overview](#overview "Goto overview") |
 [Brief](#brief "Goto brief") |
@@ -8,6 +8,8 @@
 [Key Learnings](#key-learnings "Goto key-learnings") |
 [Future Content and Improvements](#future-content-and-improvements "Goto future-content-and-improvements")
 
+
+![landscape](/assets/landscape.png)
 ## Overview:
 A side project To-Do-List App made with React. 
 
@@ -17,12 +19,19 @@ A side project To-Do-List App made with React.
 * Style the App so that it can be used on Computer screen or Mobile.
 * Design and deploy the App so it can actually be used and not be just a concept project
 
+
+<img src="Assets/lightmode.png" width="200">
+<img src="Assets/darkmode.png" width="200">
+<img src="Assets/darkmode.png" width="200">
+
+<img src="Assets/markcomplete.png" width="300">
+<img src="Assets/removealert.png" width="300">
+
 ## Technologies used:
 HTML | CSS | Bootstrap | JavaScript | React | UUID | Darkmode.js
 
 ## Deployment:
 This app has been deployed on Netlify and can be found [**here**](https://achan81-todolist.netlify.app/ "here")
-
 
 ## Getting Started:
 Use the clone button to download the app source code. 
