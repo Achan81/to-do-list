@@ -55,7 +55,9 @@ ul {
 }
 .add-btn {
   margin-left: 5px;
-  margin-top: -2px;
+  // margin-top: -2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .delete-task {
@@ -88,6 +90,8 @@ span {
 .remove-completed {
   margin-top: -30px;
   font-size: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 hr {
@@ -104,10 +108,9 @@ hr {
 }
 
 
-
-// .taskwithremove {
-//   flex: auto;
-// }
+.tasks-added {
+  line-height: 16px;
+}
 
 // * * * * * * * * * * * * C O N T A C T * * * * * * * * * * * * 
 

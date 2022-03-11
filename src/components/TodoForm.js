@@ -10,7 +10,7 @@ function TodoForm({ handleSubmit, handleChange, newTodo, hasNewTodo }) {
       {/* controlled input - by adding value key*/}
       {/* <button disabled={!hasNewTodo}>Add</button> */}
 
-      <button disabled={!hasNewTodo} className="add-btn btn btn-dark btn-sm">ADD</button>
+      <button disabled={!hasNewTodo} className="add-btn btn btn-secondary btn-sm">ADD</button>
 
       
     </form>

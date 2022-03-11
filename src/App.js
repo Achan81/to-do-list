@@ -81,7 +81,7 @@ function App() {
 
   return (
     <>
-      <div className="container col-12 listbg mt-4 pt-2 pb-1 shadow p-3 mb-5 bg-body rounded">
+      <div className="container col-11 listbg mt-4 pt-2 pb-1 shadow p-3 mb-5 bg-body rounded">
         <div className="row align-items-center">
           <div className="col">
             <main>
@@ -117,7 +117,7 @@ function App() {
 
                   <div className="col-xs-12 col-sm-6">
                     <p className="small-instruction">(click on assigned task to <span className="text-decoration-line-through">mark</span> as completed)</p>
-                    <button type="button" className="remove-completed btn btn-dark btn-sm" onClick={deleteCompletedTodo}>Remove all Completed Tasks</button>
+                    <button type="button" className="remove-completed btn btn-secondary btn-sm" onClick={deleteCompletedTodo}>Remove all Completed Tasks</button>
                   </div>
                 </div>
               </div>
