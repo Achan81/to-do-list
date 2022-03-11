@@ -47,7 +47,7 @@ ul {
 .title {
   margin-top: -30px;
   margin-bottom: 0px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .remaining {
@@ -99,23 +99,20 @@ hr {
   margin-bottom: 5px;
 }
 
-
-
 .form-label:focus {
   border-color: none;
   box-shadow: none;
   outline: 0 ;
 }
 
-
 .tasks-added {
-  line-height: 16px;
+  line-height: 18px;
 }
 
 // * * * * * * * * * * * * C O N T A C T * * * * * * * * * * * * 
 
 .icon {
-  margin-right: 3px;
+  margin-right: 0px;
   margin-bottom: 0px;
   border-radius: 0;
   transition: all 0.3s;
@@ -133,9 +130,9 @@ hr {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
-  transform: rotate(720deg);
-  -webkit-transform: rotate(720deg);
-  -moz-transform: rotate(720deg);
+  transform: rotate(720deg) scale(1.4);
+  -webkit-transform: rotate(720deg) scale(1.4);
+  -moz-transform: rotate(720deg) scale(1.4); 
 }
 
 .icons {
