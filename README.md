@@ -1,38 +1,29 @@
 # Side Project  - TO-DO-LIST README
 
 [Overview](#overview "Goto overview") |
+[Deployment](#deployment "Goto deployment") |
 [Brief](#brief "Goto brief") |
 [Technologies used](#technologies-used "Goto technologies-used") |
-[Deployment](#deployment "Goto deployment") |
 [Getting Started](#getting-started "Goto getting started") |
 [Key Learnings](#key-learnings "Goto key-learnings") |
 [Future Content and Improvements](#future-content-and-improvements "Goto future-content-and-improvements")
 
 ## Overview:
 A side project To-Do-List App made with React. 
-![app](/assets/landscape.png)
-![app](/assets/lightmode.png)
-![app](/assets/darkmode.png)
 
-
+## Deployment:
+This app has been deployed on Netlify and can be found [**here**](https://achan81-todolist.netlify.app/ "here")
 
 ## Brief:
-* revisit GA sei previous module to refresh understanding of React and JavaScript
-* Ensure basically functionality works
-* Style the App so that it can be used on Computer screen or Mobile.
+* revisit GA SEI previous module to refresh understanding of React and JavaScript
+* Ensure basic functionality works
+* Style the App so that it can be used on Computer screen or Mobile
 * Design and deploy the App so it can actually be used and not be just a concept project
 
-
-<!-- <img src="Assets/lightmode.png" alt="lightmode" width="300">
-<img src="Assets/darkmode.png" alt="darkmode" width="300">
-<img src="Assets/markcomplete.png" alt="markcomplete" width="300">
-<img src="Assets/removealert.png" alt="removealert" width="300"> -->
 
 ## Technologies used:
 HTML | CSS | Bootstrap | JavaScript | React | UUID | Darkmode.js
 
-## Deployment:
-This app has been deployed on Netlify and can be found [**here**](https://achan81-todolist.netlify.app/ "here")
 
 ## Getting Started:
 Use the clone button to download the app source code. 
