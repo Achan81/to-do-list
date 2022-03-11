@@ -11,6 +11,10 @@
 ## Overview:
 A side project To-Do-List App made with React. 
 ![app](/assets/landscape.png)
+![app](/assets/lightmode.png)
+![app](/assets/darkmode.png)
+
+
 
 ## Brief:
 * revisit GA sei previous module to refresh understanding of React and JavaScript
@@ -19,10 +23,10 @@ A side project To-Do-List App made with React.
 * Design and deploy the App so it can actually be used and not be just a concept project
 
 
-<img src="Assets/lightmode.png" alt="lightmode" width="300">
+<!-- <img src="Assets/lightmode.png" alt="lightmode" width="300">
 <img src="Assets/darkmode.png" alt="darkmode" width="300">
 <img src="Assets/markcomplete.png" alt="markcomplete" width="300">
-<img src="Assets/removealert.png" alt="removealert" width="300">
+<img src="Assets/removealert.png" alt="removealert" width="300"> -->
 
 ## Technologies used:
 HTML | CSS | Bootstrap | JavaScript | React | UUID | Darkmode.js
