@@ -8,8 +8,6 @@
 [Key Learnings](#key-learnings "Goto key-learnings") |
 [Future Content and Improvements](#future-content-and-improvements "Goto future-content-and-improvements")
 
-
-![landscape](/assets/landscape.png)
 ## Overview:
 A side project To-Do-List App made with React. 
 
@@ -20,12 +18,10 @@ A side project To-Do-List App made with React.
 * Design and deploy the App so it can actually be used and not be just a concept project
 
 
-<img src="Assets/lightmode.png" width="200">
-<img src="Assets/darkmode.png" width="200">
-<img src="Assets/darkmode.png" width="200">
-
-<img src="Assets/markcomplete.png" width="300">
-<img src="Assets/removealert.png" width="300">
+[<img src="Assets/lightmode.png" width="300">](Assets/lightmode.png)
+[<img src="Assets/darkmode.png" width="300">](Assets/darkmode.png)
+[<img src="Assets/markcomplete.png" width="300">](Assets/markcomplete.png)
+[<img src="Assets/removealert.png" width="300">](Assets/removealert.png)
 
 ## Technologies used:
 HTML | CSS | Bootstrap | JavaScript | React | UUID | Darkmode.js
