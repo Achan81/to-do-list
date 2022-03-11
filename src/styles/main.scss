@@ -53,28 +53,13 @@ ul {
 .remaining {
   margin-bottom: 6px;
 }
+
+
 .add-btn {
   margin-left: 5px;
   // margin-top: -2px;
   padding-top: 3px;
   padding-bottom: 3px;
-}
-
-.delete-task {
-  font-size: 8px;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 0.1px;
-  padding-bottom: 0.1px;
-  margin-left: 15px;
-  color: rgb(143, 55, 55);
-
-}
-
-.delete-task:focus {
-  outline: 0 ;
-  border-color: none;
-  box-shadow: none;
 }
 
 p {
@@ -105,8 +90,28 @@ hr {
   outline: 0 ;
 }
 
+.singletodos {
+  z-index: 500;
+}
+
 .tasks-added {
   line-height: 18px;
+}
+
+.delete-task {
+  font-size: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+  // padding-top: 1px;
+  // padding-bottom: 0.1px;
+  margin-left: 15px;
+  color: rgb(143, 55, 55);
+}
+
+.delete-task:focus {
+  outline: 0 ;
+  border-color: none;
+  box-shadow: none;
 }
 
 // * * * * * * * * * * * * C O N T A C T * * * * * * * * * * * * 

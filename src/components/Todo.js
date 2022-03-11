@@ -6,14 +6,16 @@ function Todo({ completed, task, handleClick, handleDelete }) {
       <div className="container">
         <div className="row">
           <div className="d-flex justify-content-center">
-            <li 
+            <div className="singletodos">
+              <li 
               //   key={todo.id} 
-              className= {completed ? 'completed' : ''}
-              // onClick={() => toggleComplete(todo.id)} //delayed definition to call following function
-              onClick={handleClick}
-            > 
-              {task}
-            </li>
+                className= {completed ? 'completed' : ''}
+                // onClick={() => toggleComplete(todo.id)} //delayed definition to call following function
+                onClick={handleClick}
+              > 
+                {task}
+              </li>
+            </div>
             <button onClick={handleDelete} type="text" className="delete-task btn-none btn btn-sm">REMOVE</button>
           
           </div>
