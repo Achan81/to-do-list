@@ -106,7 +106,7 @@ function App() {
 
               <div className="container">
                 <div className="row">
-                  <div className="col-xs-12 col-sm-6">
+                  <div className="inputform col-xs-12 col-sm-6">
                     <TodoForm
                       handleSubmit={handleSubmit}
                       handleChange={handleChange}
